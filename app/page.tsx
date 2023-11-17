@@ -1,12 +1,16 @@
 import Image from "next/image";
 import InputForm from "./InputForm";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="max-w-5xl mx-auto mt-20">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        IP Geo Lookup
-      </h1>
+    <div className="">
+      <Link href={"/"}>
+        <h1 className="bg-gradient-to-br from-slate-900 to-stone-500 dark:from-white dark:to-stone-300 bg-clip-text text-[39px] font-bold text-transparent sm:text-5xl">
+          IP Geo Lookup
+        </h1>
+      </Link>
+      <div className="my-10"></div>
       <InputForm />
     </div>
   );

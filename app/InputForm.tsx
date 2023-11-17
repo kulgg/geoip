@@ -42,18 +42,13 @@ function InputForm() {
             name="ip"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>IP Address</FormLabel>
                 <FormControl>
                   <Input placeholder="123.123.123.123" {...field} />
                 </FormControl>
-                <FormDescription>
-                  The IP address you want to geolocate
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
         </form>
       </Form>
     </div>

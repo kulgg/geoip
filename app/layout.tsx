@@ -18,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "bg-slate-900 text-slate-100")}>
+      <body
+        className={cn(
+          inter.className,
+          "bg-slate-900 text-slate-100 max-w-5xl lg:mx-auto mt-20 mx-4"
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
