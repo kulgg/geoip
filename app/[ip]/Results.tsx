@@ -35,10 +35,10 @@ function Results({ ip }: { ip: string }) {
     <div>
       {isLoading ? (
         <div className="flex justify-center">
-          <Skeleton className="w-[700px] h-64" />
+          <Skeleton className="w-[700px] h-64 bg-slate-200" />
         </div>
       ) : results?.status === "success" ? (
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center gap-10">
           <Card className="w-[700px] py-10">
             <CardHeader>
               <CardTitle>{results.city}</CardTitle>
@@ -48,7 +48,7 @@ function Results({ ip }: { ip: string }) {
             </CardHeader>
             <CardContent>
               <div className="flex flex-col items-start gap-4">
-                <div className="flex gap-8 items-center">
+                <div className="flex flex-row gap-8 items-center">
                   <div className="flex gap-1 items-center">
                     <Badge>Latitude</Badge>
                     <Label>{results.lat}</Label>
@@ -71,6 +71,12 @@ function Results({ ip }: { ip: string }) {
               </div>
             </CardContent>
           </Card>
+          <iframe
+            width="700"
+            height="300"
+            src={`https://www.google.com/maps/embed/v1/place?q=${results.lat},${results.lon}&key=${process.env.NEXT_PUBLIC_MAPS_API_KEY}`}
+            allowFullScreen
+          ></iframe>
         </div>
       ) : (
         <Badge variant={"destructive"}>Bad Query</Badge>

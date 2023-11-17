@@ -21,12 +21,12 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "bg-slate-900 text-slate-100 max-w-5xl lg:mx-auto mt-20 mx-4"
+          "bg-slate-100 text-slate-900 max-w-5xl lg:mx-auto mt-20 mx-4"
         )}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
